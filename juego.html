@@ -1,71 +1,71 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <title>BMO Arcade</title>
+    <title>Rompecabezas - Cristian Rodriguez</title>
     <link rel="stylesheet" href="css/juego.css">
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="col-40">
 
-        <div id="titulo">Rompecabezas</div>
-        <div id="instrucciones">
-            <h1>Instrucciones</h1>
-            <ul id="lista-instrucciones">
-                <li>Mover las piezas presionando las teclas de flecha.</li>
-                <li>Encontrar el orden correcto de las piezas.</li>
-            </ul>
-        </div>
-        <div id="objetivo">
-            <div class="texto-centrado">
+      <div id="titulo">
+      </div>
+      <div id="instrucciones">
+        <h1 class="bienvenido"><span>BIENVENIDO AL ROMPECABEZAS</span></h1>
+        <h2>Instrucciones</h2>
+        <ul id="lista-instrucciones">
+        </ul>
+      </div>
+      <div id="objetivo">
+        <div class="texto-centrado">
+          <img src="images/final.png" class="imagen-final" alt="Resultado final del rompecabezas">
 
-            </div>
         </div>
-        <div id="ultimo-mov">
-            <div id="flecha" class="texto-centrado">
+      </div>
+      <div id="ultimo-mov">
 
-            </div>
+        <h1>Ultimo movimiento</h1>
+        <div id="flecha" class="texto-centrado">
+
         </div>
+      </div>
 
     </div>
     <div class="col-60">
-        <div id="juego">
-            <div class="piezas" id="pieza1">
-                <img src="images/10.jpg" alt="">
+      <div id="juego">
+          <div id="pieza1" class="pieza">
+              <img src="images/10.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza2">
-                <img src="images/20.jpg" alt="">
+            <div id="pieza2" class="pieza">
+              <img src="images/20.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza3">
-                <img src="images/30.jpg" alt="">
+            <div id="pieza3" class="pieza">
+              <img src="images/30.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza4">
-                <img src="images/40.jpg" alt="">
+            <div id="pieza4" class="pieza">
+              <img src="images/40.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza5">
-                <img src="images/50.jpg" alt="">
+            <div id="pieza5" class="pieza">
+              <img src="images/50.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza6">
-                <img src="images/60.jpg" alt="">
+            <div id="pieza6" class="pieza">
+              <img src="images/60.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza7">
-                <img src="images/70.jpg" alt="">
+            <div id="pieza7" class="pieza">
+              <img src="images/70.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza8">
-                <img src="images/80.jpg" alt="">
+            <div id="pieza8" class="pieza">
+              <img src="images/80.jpg" alt="">
             </div>
-            <div class="piezas" id="pieza9">
-                <img src="images/9.png" alt="">
+            <div id="pieza9" class="pieza">
             </div>
-        </div>
-    </div>
+      </div>
     </div>
     <div id="footer">
 
     </div>
     <script src="js/juego.js"></script>
-</body>
-
+    <script src="js/sweetalert2.all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
+  </body>
 </html>
