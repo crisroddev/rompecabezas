@@ -1,11 +1,11 @@
 // Arreglo que contiene las intrucciones del juego
-var instrucciones = [];
+const instrucciones = ['Mover las piezas presionando las teclas de flecha.', 'Encontrar el orden correcto de las piezas.'];
 // Arreglo para ir guardando los movimientos que se vayan realizando
-var movimientos = [];
+let movimientos = [];
 
 // Representación de la grilla. Cada número representa a una pieza.
 // El 9 es la posición vacía
-var grilla = [
+const grilla = [
     [1, 2, 3],
     [4, 5, 6],
     [7, 8, 9]
@@ -21,11 +21,16 @@ Cada elemento de este arreglo deberá ser mostrado en la lista con id 'lista-ins
 Para eso deberás usar la función ya implementada mostrarInstruccionEnLista().
 Podés ver su implementación en la ultima parte de este codigo. */
 function mostrarInstrucciones(instrucciones) {
-    //COMPLETAR
+  instrucciones.map(instruccion => mostrarInstruccionEnLista(instruccion,
+    'lista-instrucciones'));
 }
 
 /* COMPLETAR: Crear función que agregue la última dirección al arreglo de movimientos
 y utilice actualizarUltimoMovimiento para mostrarlo en pantalla */
+function ultimoMovimiento(direccion){
+    movimientos.push(direccion)
+    actualizarUltimoMovimiento(direccion);
+}
 
 /* Esta función va a chequear si el Rompecabezas esta en la posicion ganadora.
 Existen diferentes formas de hacer este chequeo a partir de la grilla. */
