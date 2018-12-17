@@ -1,74 +1,95 @@
+/*Código armado por La Foca Loca S.A. Suavemente alterado por Gustavo Malamud */
+
+* {
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 body {
-  font-family: Arial, sans-serif;
-  width: 940px;
-  margin: 5% auto;
-  min-height: 100%;
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0 auto;
+  min-height: 100vh;
+  font-size: 1.5rem;
   background-image: url(../images/adventure.jpg);
 }
+
+h1 {
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #333;
+  font-size: 2rem;
+}
+
 ul {
   padding-left: 0;
   list-style: none;
 }
+
 li {
   padding: 5px 0;
   animation: fadein 5s;
+  margin-left: 2em;
 }
+
 li::before {
   content: "• ";
   color: #EC6778;
 }
 
-.col-40 h1 {
-  font-size: 20px;
-  color: #E84A5F;
+li {
+  font-size: 1.2rem;
 }
 
-.col-40, .col-60 {
+.bienvenido span {
+  animation: titulazo 2s infinite alternate;
+  margin: 0;
+  background-color: #333;
+  color: #FFF;
+  padding: 2%;
+  font-size: 1.7rem;
+}
+
+.col-40 h2 {
+  font-size: 1.5rem;
+}
+
+.col-40,
+.col-60 {
   display: table-cell;
   margin: 0;
   vertical-align: top;
 }
+
 .col-40 {
   background: #FFF;
   padding: 30px;
   color: #000;
+  width: 30%;
+  padding: 0 2%;
 }
 
 .col-60 {
-    width: 600px;
-    height: 600px;
-    /* background-color: rgb(255, 255, 255); */
-    background-color: #E94A5F;
-    padding: 0px;
-
+  background-color: #E94A5F;
+  width: 70%;
 }
 
-#titulo{
-   letter-spacing: 10px;
-   text-align: center;
-   width: 100%;
-   background-color: #EC6778;
-   color: white;
-   font-size: 25px;
-   font-weight: bold;
-   padding: 5px;
-
+.pieza {
+  width: 33.3333%;
+  height: 35vh;
+  margin: 0;
+  padding: 0;
+  float: left;
+  border: 1px solid #666;
 }
 
-#instrucciones h1{
-   color: #EC6778;
-   font-size: 20px;
-   margin-top: 20px;
+.pieza img {
+  width: 100%;
+  height: 100%;
 }
 
-#juego {
-   text-align: center;
-   margin: 0px;
-   padding: 0px;
-   border: 0px;
-}
-
-#flecha{
+#flecha {
   font-size: 60px;
 }
 
@@ -76,31 +97,44 @@ li::before {
   text-align: center;
 }
 
-#juego div {
+#juego {
   text-align: center;
-  animation: fadein 2s;
+  animation: fadein 1s;
+  width: 700px;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-.piezas{
-   //border: 2px solid rgb(119, 249, 50);
-   width:33%;
-   height:33%;
-   float: left;
-   margin: 0px;
-   padding: 0px;
-   border: 0px;
+@keyframes titulazo {
+  from {
+    background-color: #F00;
+  }
+  to {
+    background-color: yellow;
+  }
 }
 
-.piezas img{
-   max-width: 100%;
-   display: block;
+.imagen-final {
+  width: 100%;
 }
-#_9{
-   width: 33%;
-   height: 33%;
-}
+
+@media only screen and (max-width:37.5em) {
+  .col-40 {
+    display: none;
+    visibility: hidden;
+  }
+  .col-60 {
+    width: 100%;
+  }
+  #juego {
+    width: 100%;
+  }
